@@ -1,5 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import PlantCard from '../Components/PlantCard'
+import Footer from '../Components/Footer'
 
 const LandingPage = () => {
   return (
@@ -40,7 +42,7 @@ const LandingPage = () => {
           <div className='w-[50%] h-full flex flex-col justify-start pl-12 pr-32 items-start'>
             <h1 className='text-[1.6vw] tracking-wide font-roboto font-light text-white leading-[3.5vw]'>Jindal Power Limited (JPL), a prominent leader in India's energy sector, commands a robust portfolio of 4,300 MW. As a steadfast force at the forefront, we relentlessly strive to meet the nation's growing power demands.</h1>
             <div className='w-full h-[50%] flex gap-x-6 items-center'>
-              <div className='w-[45%] h-[80%] flex flex-col items-center justify-between bg-white bg-opacity-70 py-5'>
+              <div className='w-[45%] h-[80%] flex flex-col items-center justify-between bg-white bg-opacity-80 py-5'>
                 <div className='w-[80%]'>
                   <h1 className='text-[1.6vw] tracking-wide text-center font-roboto font-semibold text-gray-500 leading-[2vw]'>
                     Leading Force in India's Power Sector
@@ -60,11 +62,13 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className='relative flex items-center justify-center pt-[16vw] w-full bg-[url(https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707823718PioneeringInnovation.jpg)] z-[10]'>
-        <h1 className='absolute top-[7.5vw] tracking-tight left-[11vw] text-[3.8vw] font-[450] text-black font-roboto z-[20]'>
-          Energy Footprint
-        </h1>
-        <div className='w-[80%] flex bg-white h-[60vh] shadow-[-5px_-5px_10px_3px_rgba(0,0,0,0.2)] mb-40'>
+      <div className='flex-col flex items-center justify-center pt-[16vw] w-full bg-cover bg-right bg-[url(https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707823718PioneeringInnovation.jpg)] z-[10] gap-y-12 pb-28'>
+        <div className='flex items-start justify-start w-[80%]'>
+          <h1 className=' text-[3.8vw] font-[500] text-black font-roboto z-[20]'>
+            Energy Footprint
+          </h1>
+        </div>
+        <div className='w-[80%] flex bg-white h-[60vh] shadow-[-5px_-5px_10px_3px_rgba(0,0,0,0.2)]'>
           <div className='h-full flex items-center justify-center py-8'>
             <video className='w-[80%] h-full object-contain' 
             autoPlay
@@ -78,7 +82,127 @@ const LandingPage = () => {
             </h3>
           </div>
         </div>
+        <div className='flex items-start justify-start w-[80%]'>
+          <h1 className=' text-[3.8vw] font-[500] text-black font-roboto z-[20]'>
+            Pioneering Innovation
+          </h1>
+        </div>
+        <div className='w-[80%] h-[16vw] flex bg-transparent justify-between'>
+          <div className='w-[49%] h-full bg-[#343541] flex flex-col pb-2'>
+            <div className='flex items-center justify-between h-[40%] px-3'>
+              <h3 className='font-roboto font-[250] text-white uppercase text-[1.7vw]'>Phase - 1</h3>
+              <div className='flex items-center justify-center text-white text-[1.7vw] font-roboto font-semibold w-[35%] h-[4vw] bg-orange-500'> 
+                <h1 className='whitespace-nowrap'>1st IPP in 2007</h1>
+              </div> 
+            </div>
+            <div className='flex flex-col h-[60%]'>
+              <div className= 'h-[50%] flex items-center justify-between'>
+                <div className='flex items-center justify-center gap-x-10'>
+                  <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707827155ThermalPlantIcon.png" className='w-[13%] object-fit' alt="" />
+                  <h3 className='font-roboto font-[250] text-white text-[1.7vw]'>1000 MW Capacity</h3>
+                </div>
+              </div>
+              <div className= 'h-[50%] flex items-center justify-between pl-4'>
+                <div className='flex items-center justify-center gap-x-10'>
+                  <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707979037Location-Icon.png" className='w-[13%] object-fit' alt="" />
+                  <h3 className='font-roboto font-[250] text-white text-[1.7vw]'>Tamnar, Chhattisgarh</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='w-[49%] h-full bg-[#343541] flex flex-col pb-2'>
+            <div className='flex items-center justify-between h-[40%] px-3'>
+              <h3 className='font-roboto font-[250] text-white uppercase text-[1.7vw]'>Phase - 2</h3>
+              <div className='flex items-center justify-center text-white text-[1.7vw] font-roboto font-semibold w-[35%] h-[4vw] bg-orange-500'> 
+                <h1 className='whitespace-nowrap'>Expansion
+                </h1>
+              </div> 
+            </div>
+            <div className='flex flex-col h-[60%]'>
+              <div className= 'h-[50%] flex items-center justify-between'>
+                <div className='flex items-center justify-center gap-x-10 pt-12 px-12'>
+                  <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707827155ThermalPlantIcon.png" className='w-[10%] object-fit' alt="" />
+                  <h3 className='font-roboto font-[250] text-white text-[1.7vw]'>2400 MW (4x600 MW) Thermal Power Plant</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='w-[80%] flex bg-white font-roboto font-[250] text-[1.7vw] p-12 shadow-[-5px_-5px_10px_3px_rgba(0,0,0,0.2)]'>
+          In 2007, The OP Jindal Super Thermal Power Plant, an Independent Power Plant (IPP) with a 1000 MW (4x250 MW) unit was established at Tamnar in the Raigarh district of Chhattisgarh. The capacity was later expanded with a 2400 MW (4x600 MW) thermal power plant, bringing the total generation capacity to 3400 MW.
+        </div>
       </div>
+      <div className='bg-white h-screen w-full pt-48 relative overflow-hidden'>
+        <div className='absolute left-[10vw] top-[6vw] font-roboto'>
+          <h1 className='text-[4.3vw] font-bold'>Diverse Portfolio</h1>
+          <div className='flex items-center justify-start gap-x-4 pt-2'>
+            <h1 className='text-[1.5vw] uppercase'>
+              Explore
+            </h1>
+            <div className='w-16 h-4'>
+              <img src="https://d2lptvt2jijg6f.cloudfront.net/JPL/custom/1598939402_arrow-right-b3.png" className='object-cover' alt="" />
+            </div>
+          </div>
+        </div>
+        <PlantCard image1='https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984067Tamnar-BG.jpg'/>
+        <div className='absolute w-[14vw] flex items-center gap-x-[2px] justify-center h-[10vh] left-[50%] bottom-0 -translate-x-1/2'>
+          <div className='w-[40%] h-full bg-white flex items-center justify-center'>
+            <img className='w-[80%]' src="https://cdn-icons-png.flaticon.com/128/5111/5111424.png" alt="" />
+          </div>
+          <div className='w-[40%] h-full bg-white flex items-center justify-center'>
+            <img className='w-[80%]' src="https://cdn-icons-png.flaticon.com/128/5111/5111412.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div className='bg-white pt-36 pb-12 w-full flex items-center justify-center relative overflow-hidden'>
+        <div className='absolute left-[10vw] top-[6vw] font-roboto'>
+          <h1 className='text-[3.8vw] font-bold'>Vision for Sustainability</h1>
+        </div>
+        <div className='w-[80%] h-[60vh] flex justify-between items-center gap-x-6'>
+
+          <div className='bg-[#343541] uppercase font-roboto flex flex-col items-center justify-center gap-y-4 py-4 w-[45%] h-[75%] px-4'>
+            <div className='flex flex-col justify-center items-center text-[1.7vw] text-white'>
+              <h3 className='font-[300]'>
+                Commited to
+              </h3>
+              <h3 className='font-bold'>
+                Renewable Energy
+              </h3>
+            </div>
+            <div className='w-full flex items-center justify-center'>
+              <div className=' bg-white flex items-center justify-center py-2 w-24 h-16'>
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707905654solar-icon.png" className='object-cover w-[70%]' alt="" />
+              </div>
+              <div className='w-full h-full bg-orange-500 flex items-center justify-center font-[300] capitalize text-white text-[1.7vw]'>
+                <h3>Renewable Energy Usage</h3>
+              </div>
+            </div>
+            <div className='w-full flex items-center justify-center'>
+              <div className='bg-white flex items-center justify-center py-2 w-24 h-16'>
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707905653co2-reduction-icon.png" className='object-cover w-[60%]' alt="" />
+              </div>
+              <div className='w-full h-full bg-orange-500 flex items-center justify-center font-[300] capitalize text-white text-[1.7vw]'>
+                <h3>Carbon Emissions Reduction</h3>
+              </div>
+            </div>
+            <div className='w-full flex items-center justify-center'>
+              <div className='bg-white flex items-center justify-center py-2 w-24 h-16'>
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707905654enviornment-protection-icon.png" className='object-cover w-[70%]' alt="" />
+              </div>
+              <div className='w-full h-full bg-orange-500 flex items-center justify-center font-[300] capitalize text-white text-[1.7vw]'>
+                <h3>Environmental Protection</h3>
+              </div>
+            </div>
+          </div>
+          <div className='w-[55%] h-[75%] bg-[#F1F1F1] font-roboto font-[250] text-[1.7vw] p-8'>
+            <h3>
+              Committed to increasing the share of power generated through renewable sources. As the 5th largest integrated power producer, we aim to set benchmarks in renewable energy, carbon emissions, and environmental protection.
+            </h3>
+          </div>
+          
+        </div>
+      </div>
+      <Footer/>
     </>
   )
 }

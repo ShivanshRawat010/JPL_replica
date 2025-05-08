@@ -2,11 +2,12 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <nav className='fixed flex items-center bg-transparent font-roboto text-white z-[20]'>
+    <nav className='fixed flex items-center bg-transparent w-full font-roboto text-white z-[20]'>
       <div className='text-2xl font-bold'>
-        <img className='w-[190px] ml-40 -my-16' src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707979004PowerLogos-L.png" alt="" />
+        {/* <img className='w-[190px] ml-40 -my-16' src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707979004PowerLogos-L.png" alt="" /> */}
+        <img className='w-[190px] ml-40 -my-16' src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707979004PowerLogos.png" alt="" />
       </div>
-      <div className='ml-80 flex py-20 space-x-9 text-white uppercase text-[14px] tracking-tight'>
+      <div className='ml-80 flex py-20 space-x-9 text-black uppercase text-[14px] tracking-tight'>
         <a href="/about" className='hover:text-gray-400'>About us</a>
         <a href="/business" className='hover:text-gray-400'>Business</a>
         <a href="/people" className='hover:text-gray-400'>people</a>
