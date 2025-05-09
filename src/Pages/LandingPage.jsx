@@ -1,9 +1,65 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import PlantCard from '../Components/PlantCard'
 import Footer from '../Components/Footer'
+import { motion } from 'framer-motion'
+import Lenis from '@studio-freight/lenis'
+import { gsap } from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 const LandingPage = () => {
+
+  const plantData = [
+    {
+      image1: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984067Tamnar-BG.jpg",
+      location: "Tamnar, Chhattisgarh",
+      capacity: "3400 MW",
+      image2: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707826670Tamnar-pop.jpg",
+      link: "https://www.jindalpower.com/",
+      text: "The Tamnar Thermal Power Plant, with an impressive 3,400 MW capacity, stands as a landmark achievement in India's power generation industry."
+    },
+    {
+      image1: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984066Shirpur-BG.jpg",
+      location: "Shirpur, Maharashtra",
+      capacity: "300 MW",
+      image2: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707826670Shirpur-pop.jpg",
+      link: "https://www.jindalpower.com/",
+      text: "The 300 MW Shirpur Thermal Power Plant in Dhule, Maharashtra, reinforces our commitment to regional energy independence, providing reliable power to Maharashtra and beyond."
+    },
+    {
+      image1: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984066Simhapuri-BG.jpg",
+      location: "Simhapuri, Andhra Pradesh",
+      capacity: "600 MW",
+      image2: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707826670Simhapuri-pop.jpg",
+      link: "https://www.jindalpower.com/",
+      text: "Our 600 MW Simhapuri Thermal Power Plant in Nellore, Andhra Pradesh, adds substantial capacity to our diverse energy portfolio, catering to the energy needs of the region."
+    }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovering1, setIsHovering1] = useState(false);
+
+  const nextSlide = () => {
+    setCurrentIndex((currentIndex + 1) % plantData.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((currentIndex - 1 + plantData.length) % plantData.length);
+  };
+
+
+  useEffect(() => {
+    const lenis = new Lenis();
+    gsap.registerPlugin(ScrollTrigger)
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  })
+
   return (
     <>
       <Navbar />
@@ -19,9 +75,9 @@ const LandingPage = () => {
           playsInline
           preload="auto"
         />
-        <div className='absolute bottom-[145px] left-[150px] text-[53px] font-bold text-white font-roboto z-[20]'>
+        <motion.div initial={{ y: 200, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1.5, duration: 1, ease: 'easeOut' }} className='absolute bottom-[145px] left-[150px] text-[53px] font-bold text-white font-roboto z-[10]'>
           Shaping India's Energy Landscape
-        </div>
+        </motion.div>
       </div>
       <div className='text-[25px] font-[Roboto] bg-white tracking-tight leading-[36px] font-[250] px-[150px] py-24'>
         <span className='font-[360]'>Jindal Power Limited</span> is a leading energy company dedicated to sustainable and dependable power generation. Our cutting-edge technology and strategic power plant locations enable us to provide a consistent and efficient electricity supply. We are committed to operational excellence, safety, and social responsibility. Join us in shaping  the energy landscape and creating a brighter, sustainable future.
@@ -33,9 +89,9 @@ const LandingPage = () => {
         <div className='w-full flex h-[40vw]'>
           <div className='w-[50%] h-full flex items-start justify-end pl-4'>
             <div className='relative w-[80%] h-[90%]'>
-                <div className='absolute flex items-center justify-center text-white text-[30px] font-roboto font-semibold -translate-y-1/2 top-0 left-0 w-40 h-20 bg-orange-500 z-[10]'> 
-                  <h1>4300 MW</h1>
-                </div>  
+              <div className='absolute flex items-center justify-center text-white text-[30px] font-roboto font-semibold -translate-y-1/2 top-0 left-0 w-40 h-20 bg-orange-500 z-[10]'>
+                <h1>4300 MW</h1>
+              </div>
               <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707821629thermal-power-capacity2.jpg" alt="" className='w-full h-full object-center' />
             </div>
           </div>
@@ -53,7 +109,7 @@ const LandingPage = () => {
               <div className='w-[45%] h-[80%] flex flex-col items-center justify-between bg-white bg-opacity-80 py-5'>
                 <div className='w-[80%]'>
                   <h1 className='text-[1.6vw] tracking-wide text-center font-roboto font-semibold text-gray-500 leading-[2vw]'>
-                  Robust Energy Portfolio
+                    Robust Energy Portfolio
                   </h1>
                 </div>
                 <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1708074698RobustEnergy.png" className='w-[35%]' alt="" />
@@ -70,11 +126,11 @@ const LandingPage = () => {
         </div>
         <div className='w-[80%] flex bg-white h-[60vh] shadow-[-5px_-5px_10px_3px_rgba(0,0,0,0.2)]'>
           <div className='h-full flex items-center justify-center py-8'>
-            <video className='w-[80%] h-full object-contain' 
-            autoPlay
-            loop
-            muted
-            playsInline src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1708594444JPLMap1.mp4"></video>
+            <video className='w-[80%] h-full object-contain'
+              autoPlay
+              loop
+              muted
+              playsInline src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1708594444JPLMap1.mp4"></video>
           </div>
           <div className='w-[50%] h-full pl-20 pt-12 font-roboto font-light text-[1.65vw] tracking-wide leading-9'>
             <h3>
@@ -91,18 +147,18 @@ const LandingPage = () => {
           <div className='w-[49%] h-full bg-[#343541] flex flex-col pb-2'>
             <div className='flex items-center justify-between h-[40%] px-3'>
               <h3 className='font-roboto font-[250] text-white uppercase text-[1.7vw]'>Phase - 1</h3>
-              <div className='flex items-center justify-center text-white text-[1.7vw] font-roboto font-semibold w-[35%] h-[4vw] bg-orange-500'> 
+              <div className='flex items-center justify-center text-white text-[1.7vw] font-roboto font-semibold w-[35%] h-[4vw] bg-orange-500'>
                 <h1 className='whitespace-nowrap'>1st IPP in 2007</h1>
-              </div> 
+              </div>
             </div>
             <div className='flex flex-col h-[60%]'>
-              <div className= 'h-[50%] flex items-center justify-between'>
+              <div className='h-[50%] flex items-center justify-between'>
                 <div className='flex items-center justify-center gap-x-10'>
                   <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707827155ThermalPlantIcon.png" className='w-[13%] object-fit' alt="" />
                   <h3 className='font-roboto font-[250] text-white text-[1.7vw]'>1000 MW Capacity</h3>
                 </div>
               </div>
-              <div className= 'h-[50%] flex items-center justify-between pl-4'>
+              <div className='h-[50%] flex items-center justify-between pl-4'>
                 <div className='flex items-center justify-center gap-x-10'>
                   <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707979037Location-Icon.png" className='w-[13%] object-fit' alt="" />
                   <h3 className='font-roboto font-[250] text-white text-[1.7vw]'>Tamnar, Chhattisgarh</h3>
@@ -113,13 +169,13 @@ const LandingPage = () => {
           <div className='w-[49%] h-full bg-[#343541] flex flex-col pb-2'>
             <div className='flex items-center justify-between h-[40%] px-3'>
               <h3 className='font-roboto font-[250] text-white uppercase text-[1.7vw]'>Phase - 2</h3>
-              <div className='flex items-center justify-center text-white text-[1.7vw] font-roboto font-semibold w-[35%] h-[4vw] bg-orange-500'> 
+              <div className='flex items-center justify-center text-white text-[1.7vw] font-roboto font-semibold w-[35%] h-[4vw] bg-orange-500'>
                 <h1 className='whitespace-nowrap'>Expansion
                 </h1>
-              </div> 
+              </div>
             </div>
             <div className='flex flex-col h-[60%]'>
-              <div className= 'h-[50%] flex items-center justify-between'>
+              <div className='h-[50%] flex items-center justify-between'>
                 <div className='flex items-center justify-center gap-x-10 pt-12 px-12'>
                   <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707827155ThermalPlantIcon.png" className='w-[10%] object-fit' alt="" />
                   <h3 className='font-roboto font-[250] text-white text-[1.7vw]'>2400 MW (4x600 MW) Thermal Power Plant</h3>
@@ -144,14 +200,23 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <PlantCard image1='https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984067Tamnar-BG.jpg'/>
+        <motion.div   className='bg-emerald-400 w-full  flex-nowrap overflow-x-auto'>
+          <PlantCard image1={
+            plantData[currentIndex].image1} 
+            location={plantData[currentIndex].location} 
+            capacity={plantData[currentIndex].capacity} 
+            image2={plantData[currentIndex].image2} 
+            link={plantData[currentIndex].link} 
+            text={plantData[currentIndex].text} 
+          />
+        </motion.div>
         <div className='absolute w-[14vw] flex items-center gap-x-[2px] justify-center h-[10vh] left-[50%] bottom-0 -translate-x-1/2'>
-          <div className='w-[40%] h-full bg-white flex items-center justify-center'>
+          <button onClick={prevSlide} className='w-[40%] h-full bg-white flex items-center justify-center'>
             <img className='w-[80%]' src="https://cdn-icons-png.flaticon.com/128/5111/5111424.png" alt="" />
-          </div>
-          <div className='w-[40%] h-full bg-white flex items-center justify-center'>
+          </button>
+          <button onClick={nextSlide} className='w-[40%] h-full bg-white flex items-center justify-center'>
             <img className='w-[80%]' src="https://cdn-icons-png.flaticon.com/128/5111/5111412.png" alt="" />
-          </div>
+          </button>
         </div>
       </div>
       <div className='bg-white pt-36 pb-12 w-full flex items-center justify-center relative overflow-hidden'>
@@ -199,10 +264,10 @@ const LandingPage = () => {
               Committed to increasing the share of power generated through renewable sources. As the 5th largest integrated power producer, we aim to set benchmarks in renewable energy, carbon emissions, and environmental protection.
             </h3>
           </div>
-          
+
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   )
 }
