@@ -4,7 +4,7 @@ import React from 'react'
 const PlantCard = (props) => {
   const { location, capacity, image1, image2, link, text } = props
   return (
-    <div className='h-[80vh] w-screen flex items-end justify-center'>
+    <div className='h-[80vh] w-full flex items-end justify-center'>
       <div className='w-full h-[90%] flex' style={{ backgroundImage: `url(${image1})` }}>
         <div className='w-[50%] h-full flex items-center justify-end tracking-wider font-roboto'>
           <div className='w-[80%] h-full flex flex-col pt-12 gap-y-8'>

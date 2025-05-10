@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Components/Navbar'
-import PlantCard from '../Components/PlantCard'
+import Slider from '../Pages/Slider'
 import Footer from '../Components/Footer'
 import { motion } from 'framer-motion'
 import Lenis from '@studio-freight/lenis'
@@ -188,8 +188,13 @@ const LandingPage = () => {
           In 2007, The OP Jindal Super Thermal Power Plant, an Independent Power Plant (IPP) with a 1000 MW (4x250 MW) unit was established at Tamnar in the Raigarh district of Chhattisgarh. The capacity was later expanded with a 2400 MW (4x600 MW) thermal power plant, bringing the total generation capacity to 3400 MW.
         </div>
       </div>
-      <div className='bg-white h-screen w-full pt-48 relative overflow-hidden'>
-        <div className='absolute left-[10vw] top-[6vw] font-roboto'>
+
+
+
+
+
+      <div className='bg-white h-screen w-full relative overflow-hidden'>
+        <div className='absolute left-[10vw] top-[6vw] font-roboto z-[20]'>
           <h1 className='text-[4.3vw] font-bold'>Diverse Portfolio</h1>
           <div className='flex items-center justify-start gap-x-4 pt-2'>
             <h1 className='text-[1.5vw] uppercase'>
@@ -200,25 +205,12 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <motion.div   className='bg-emerald-400 w-full  flex-nowrap overflow-x-auto'>
-          <PlantCard image1={
-            plantData[currentIndex].image1} 
-            location={plantData[currentIndex].location} 
-            capacity={plantData[currentIndex].capacity} 
-            image2={plantData[currentIndex].image2} 
-            link={plantData[currentIndex].link} 
-            text={plantData[currentIndex].text} 
-          />
-        </motion.div>
-        <div className='absolute w-[14vw] flex items-center gap-x-[2px] justify-center h-[10vh] left-[50%] bottom-0 -translate-x-1/2'>
-          <button onClick={prevSlide} className='w-[40%] h-full bg-white flex items-center justify-center'>
-            <img className='w-[80%]' src="https://cdn-icons-png.flaticon.com/128/5111/5111424.png" alt="" />
-          </button>
-          <button onClick={nextSlide} className='w-[40%] h-full bg-white flex items-center justify-center'>
-            <img className='w-[80%]' src="https://cdn-icons-png.flaticon.com/128/5111/5111412.png" alt="" />
-          </button>
-        </div>
+        <Slider />
       </div>
+
+
+
+
       <div className='bg-white pt-36 pb-12 w-full flex items-center justify-center relative overflow-hidden'>
         <div className='absolute left-[10vw] top-[6vw] font-roboto'>
           <h1 className='text-[3.8vw] font-bold'>Vision for Sustainability</h1>
