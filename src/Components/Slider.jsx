@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
-import PlantCard from '../Components/PlantCard';
+import PlantCard from './PlantCard';
 
 const plantData = [
   {
@@ -97,11 +97,14 @@ const Test = () => {
       </div>
       
       {/* Hide default Swiper arrows with CSS */}
-      <style jsx>{`
-        .swiper-button-next, .swiper-button-prev {
-          display: none;
-        }
-      `}</style>
+      <style>
+        {`
+          .swiper-button-next, .swiper-button-prev {
+            display: none;
+          }
+        `}
+      </style>
+
     </div>
   );
 };

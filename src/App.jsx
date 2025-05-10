@@ -1,13 +1,31 @@
 import React from 'react'
 import LandingPage from './Pages/LandingPage'
-import Test from './Pages/Slider'
-import Navbar from './Components/Navbar'
+import Trial from './Pages/Trial'
+import { useEffect } from 'react';
+import Lenis from '@studio-freight/lenis';
+
+
 
 const App = () => {
+
+  useEffect(() => {
+    const lenis = new Lenis();
+  
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+  
+    requestAnimationFrame(raf);
+
+  }, []);
+  
+  
+
   return (
     <div>
-      <LandingPage />
-      {/* <Test /> */}
+      {/* <LandingPage /> */}
+      <Trial/>
     </div>
   )
 }

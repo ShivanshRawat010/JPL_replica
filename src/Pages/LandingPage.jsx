@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Components/Navbar'
-import Slider from '../Pages/Slider'
+import Slider from '../Components/Slider'
 import Footer from '../Components/Footer'
 import { motion } from 'framer-motion'
-import Lenis from '@studio-freight/lenis'
 import { gsap } from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const LandingPage = () => {
 
@@ -49,21 +48,45 @@ const LandingPage = () => {
 
 
   useEffect(() => {
-    const lenis = new Lenis();
-    gsap.registerPlugin(ScrollTrigger)
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    gsap.registerPlugin(ScrollTrigger); // Register the ScrollTrigger plugin
 
-    requestAnimationFrame(raf);
+    gsap.fromTo('.text-1',
+      { opacity: 0, y: 50 }, // start 50px below its original position
+      {
+        opacity: 1,
+        y: 0, // move to original position
+        scrollTrigger: {
+          trigger: '.text-div-1',
+          start: 'center bottom',
+        },
+        duration: 1.5,
+        ease: "power2.inOut",
+      }
+    );
+    gsap.fromTo('.text-div-2',
+      { opacity: 0, y: 50 }, // start 50px below its original position
+      {
+        opacity: 1,
+        y: 0, // move to original position
+        scrollTrigger: {
+          trigger: '.text-div-2',
+          start: 'center bottom',
+        },
+        duration: 1.5,
+        ease: "power2.inOut",
+      }
+    )    
   })
 
   return (
     <>
       <Navbar />
       <div className='z-[-40] fixed w-full h-screen bg-[url(https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707821242thermal-power-capacity-bg.jpg)] bg-cover'></div>
+      
+      
+      
+      
       <div className="relative w-full h-screen overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 z-[10]" />
         <video
@@ -79,9 +102,19 @@ const LandingPage = () => {
           Shaping India's Energy Landscape
         </motion.div>
       </div>
-      <div className='text-[25px] font-[Roboto] bg-white tracking-tight leading-[36px] font-[250] px-[150px] py-24'>
-        <span className='font-[360]'>Jindal Power Limited</span> is a leading energy company dedicated to sustainable and dependable power generation. Our cutting-edge technology and strategic power plant locations enable us to provide a consistent and efficient electricity supply. We are committed to operational excellence, safety, and social responsibility. Join us in shaping  the energy landscape and creating a brighter, sustainable future.
+
+
+
+
+      <div className='text-div-1 text-[25px] font-[Roboto] bg-white tracking-tight leading-[36px] font-[250] px-[150px] py-24'>
+        <h3 className='text-1'>
+          <span className='font-[360]'>Jindal Power Limited</span> is a leading energy company dedicated to sustainable and dependable power generation. Our cutting-edge technology and strategic power plant locations enable us to provide a consistent and efficient electricity supply. We are committed to operational excellence, safety, and social responsibility. Join us in shaping  the energy landscape and creating a brighter, sustainable future.
+        </h3>
       </div>
+
+
+
+
       <div className='relative flex items-center justify-center pt-[300px] w-full pb-12 bg-black bg-opacity-50 z-[10]'>
         <h1 className='absolute top-[120px] tracking-tight left-[150px] text-[3.8vw] font-semibold text-white font-roboto z-[20]'>
           Current Thermal Power Capacity
@@ -118,6 +151,9 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+
+
       <div className='flex-col flex items-center justify-center pt-[16vw] w-full bg-cover bg-right bg-[url(https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707823718PioneeringInnovation.jpg)] z-[10] gap-y-12 pb-28'>
         <div className='flex items-start justify-start w-[80%]'>
           <h1 className=' text-[3.8vw] font-[500] text-black font-roboto z-[20]'>
@@ -191,10 +227,8 @@ const LandingPage = () => {
 
 
 
-
-
       <div className='bg-white h-screen w-full relative overflow-hidden'>
-        <div className='absolute left-[10vw] top-[6vw] font-roboto z-[20]'>
+        <div className='text-div-2 absolute left-[10vw] top-[6vw] font-roboto z-[20]'>
           <h1 className='text-[4.3vw] font-bold'>Diverse Portfolio</h1>
           <div className='flex items-center justify-start gap-x-4 pt-2'>
             <h1 className='text-[1.5vw] uppercase'>
