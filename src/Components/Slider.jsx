@@ -11,7 +11,7 @@ const plantData = [
     location: "Tamnar, Chhattisgarh",
     capacity: "3400 MW",
     image2: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707826670Tamnar-pop.jpg",
-    link: "https://www.jindalpower.com/",
+    link: "/india-operations",
     text: "The Tamnar Thermal Power Plant, with an impressive 3,400 MW capacity, stands as a landmark achievement in India's power generation industry."
   },
   {
@@ -19,7 +19,7 @@ const plantData = [
     location: "Shirpur, Maharashtra",
     capacity: "300 MW",
     image2: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707826670Shirpur-pop.jpg",
-    link: "https://www.jindalpower.com/",
+    link: "/india-operations",
     text: "The 300 MW Shirpur Thermal Power Plant in Dhule, Maharashtra, reinforces our commitment to regional energy independence, providing reliable power to Maharashtra and beyond."
   },
   {
@@ -27,7 +27,7 @@ const plantData = [
     location: "Simhapuri, Andhra Pradesh",
     capacity: "600 MW",
     image2: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707826670Simhapuri-pop.jpg",
-    link: "https://www.jindalpower.com/",
+    link: "/india-operations",
     text: "Our 600 MW Simhapuri Thermal Power Plant in Nellore, Andhra Pradesh, adds substantial capacity to our diverse energy portfolio, catering to the energy needs of the region."
   }
 ];

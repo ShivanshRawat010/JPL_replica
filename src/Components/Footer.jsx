@@ -55,7 +55,7 @@ const Footer = () => {
             </a>
             <a
               target="_blank"
-              href="https://www.facebook.com/JindalPowerLtd/"
+              href="https://x.com/JindalPowerLtd/"
               className="w-10"
             >
               <img
@@ -66,7 +66,7 @@ const Footer = () => {
             </a>
             <a
               target="_blank"
-              href="https://www.facebook.com/JindalPowerLtd/"
+              href="https://www.linkedin.com/company/jindal-power-limited/"
               className="w-10"
             >
               <img

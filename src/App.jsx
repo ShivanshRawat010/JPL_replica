@@ -3,6 +3,8 @@ import LandingPage from './Pages/LandingPage'
 import Trial from './Pages/Trial'
 import { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
+import { Route, Routes } from 'react-router-dom';
+import India_operation from './Pages/India_operation';
 
 
 
@@ -23,10 +25,10 @@ const App = () => {
   
 
   return (
-    <div>
-      <LandingPage />
-      {/* <Trial/> */}
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/india-operations" element={<India_operation />} />
+    </Routes>
   )
 }
 
