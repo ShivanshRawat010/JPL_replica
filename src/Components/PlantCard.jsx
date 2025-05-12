@@ -1,5 +1,6 @@
 import { li } from 'framer-motion/client'
 import React from 'react'
+import Button_slider from './Button_slider'
 
 const PlantCard = (props) => {
   const { location, capacity, image1, image2, link, text } = props
@@ -18,9 +19,7 @@ const PlantCard = (props) => {
             <h3 className='font-roboto text-[1.7vw] text-white font-[250]'>
               {text}
             </h3>
-            <a href={link} className='uppercase tracking-widest w-60 h-16 bg-white flex items-center justify-center text-[1.2vw]'>
-              L e a r n <div className='w-3 inline-block h-2 bg-white'></div>M o r e
-            </a>
+            <Button_slider link={link} />
           </div>
         </div>
         <div className='w-[50%] h-full flex items-center justify-center '>
