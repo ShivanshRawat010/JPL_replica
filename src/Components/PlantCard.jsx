@@ -19,7 +19,7 @@ const PlantCard = (props) => {
             <h3 className='font-roboto text-[1.7vw] text-white font-[250]'>
               {text}
             </h3>
-            <Button_slider link={link} />
+            <Button_slider link={link} text="LEARN MORE"/>
           </div>
         </div>
         <div className='w-[50%] h-full flex items-center justify-center '>

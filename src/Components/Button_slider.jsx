@@ -4,12 +4,10 @@ const Button_slider = (props) => {
   return (
     <a href={props.link} className="uppercase tracking-widest w-[250px] h-[56px] bg-white flex items-center justify-center">
       <div className="relative group w-full h-full overflow-hidden shadow-lg cursor-pointer">
-        {/* Background overlay */}
         <div className="absolute inset-0 bg-black transform scale-x-0 origin-left transition-transform duration-200 ease-in-out group-hover:scale-x-100" />
 
-        {/* Content */}
         <div className="relative z-10 flex items-center justify-center h-full text-black font-roboto font-[400] text-[15px] transition duration-200 transform group-hover:scale-110 group-hover:text-white">
-          L E A R N<span className='w-[14px]'></span>M O R E
+          {props.text}
         </div>
       </div>
     </a>

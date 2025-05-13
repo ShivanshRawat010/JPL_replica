@@ -1,19 +1,62 @@
-import React from 'react';
+import { useEffect } from 'react';
 
-const Trial = () => {
+export default function Trial() {
+  // Your background images
+  const backgrounds = [
+    'https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984067Tamnar-BG.jpg',
+    'https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984066Shirpur-BG.jpg',
+    'https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984066Simhapuri-BG.jpg'
+  ];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="relative group w-64 h-32 overflow-hidden rounded-lg shadow-lg cursor-pointer">
-        {/* Background overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
-        
-        {/* Content */}
-        <div className="relative z-10 flex items-center justify-center h-full text-white font-semibold text-xl">
-          Hover Me
+    <div>
+      {/* First Section */}
+      <div 
+        className="h-screen w-full relative" 
+        style={{
+          backgroundImage: `url(${backgrounds[0]})`,
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="absolute bottom-16 left-16 text-white">
+          <div className="text-orange-500 text-4xl font-bold mb-2">03</div>
+          <h2 className="text-5xl font-bold">Respect for<br />People</h2>
+        </div>
+      </div>
+
+      {/* Second Section */}
+      <div 
+        className="h-screen w-full relative" 
+        style={{
+          backgroundImage: `url(${backgrounds[1]})`,
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="absolute bottom-16 left-16 text-white">
+          <div className="text-orange-500 text-4xl font-bold mb-2">04</div>
+          <h2 className="text-5xl font-bold">Sustainability</h2>
+        </div>
+      </div>
+
+      {/* Third Section */}
+      <div 
+        className="h-screen w-full relative" 
+        style={{
+          backgroundImage: `url(${backgrounds[2]})`,
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="absolute bottom-16 left-16 text-white">
+          <div className="text-orange-500 text-4xl font-bold mb-2">05</div>
+          <h2 className="text-5xl font-bold">Innovation</h2>
         </div>
       </div>
     </div>
   );
-};
-
-export default Trial;
+}

@@ -11,9 +11,7 @@ const Navbar = () => {
   const logoLarge = "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707979004PowerLogos-L.png";
   const logoSmall = "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707979004PowerLogos.png";
   
-  // Set loaded state after component mounts
   useEffect(() => {
-    // Small delay to ensure DOM is ready
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 100);
@@ -22,12 +20,10 @@ const Navbar = () => {
   }, []);
   
   useEffect(() => {
-    // Get initial height of navbar
     if (navbarRef.current && !initialHeight) {
       setInitialHeight(navbarRef.current.offsetHeight);
     }
     
-    // Function to handle scroll
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 50) {
@@ -37,19 +33,15 @@ const Navbar = () => {
       }
     };
     
-    // Check initial scroll position on mount
     handleScroll();
     
-    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
     
-    // Clean up
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [initialHeight]);
   
-  // Apply styles based on scroll state
   useEffect(() => {
     if (!navbarRef.current || !logoRef.current || !initialHeight) return;
     
@@ -57,7 +49,6 @@ const Navbar = () => {
     const links = document.querySelectorAll('.nav-link');
     
     if (isScrolled) {
-      // Scrolled state
       navbar.style.height = `${initialHeight * 0.4}px`;
       navbar.style.backgroundColor = 'white';
       links.forEach(link => {
@@ -65,7 +56,6 @@ const Navbar = () => {
         link.classList.add('text-black');
       });
     } else {
-      // Top state
       navbar.style.height = `${initialHeight}px`;
       navbar.style.backgroundColor = 'transparent';
       links.forEach(link => {
@@ -75,7 +65,6 @@ const Navbar = () => {
     }
   }, [isScrolled, initialHeight]);
 
-  // Logo animation variants
   const logoVariants = {
     hidden: { y: -200, opacity: 0 },
     visible: { 
@@ -98,21 +87,23 @@ const Navbar = () => {
           animate={isLoaded ? "visible" : "hidden"}
           variants={logoVariants}
         >
-          <img 
-            ref={logoRef}
-            className={`ml-40 -my-24 transition-all duration-300 ${isScrolled ? 'w-36 pt-16' : 'w-48 pt-0'}`}
-            src={isScrolled ? logoSmall : logoLarge}
-            alt="JPL Logo"
-          />
+          <a href="/" className="ml-40 block" onClick={() => window.scrollTo(0, 0)}>
+            <img 
+              ref={logoRef}
+              className={`-my-24 transition-all duration-300 ${isScrolled ? 'w-36 pt-16' : 'w-48 pt-0'}`}
+              src={isScrolled ? logoSmall : logoLarge}
+              alt="JPL Logo"
+            />
+          </a>
         </motion.div>
       </div>
-      <div className="ml-80 flex space-x-9 uppercase text-sm tracking-tight">
-        <a href="/about" className="nav-link transition-colors duration-300">About us</a>
-        <a href="/business" className="nav-link transition-colors duration-300">Business</a>
-        <a href="/people" className="nav-link transition-colors duration-300">people</a>
-        <a href="/sustainability" className="nav-link transition-colors duration-300">sustainability</a>
-        <a href="/media" className="nav-link transition-colors duration-300">Media</a>
-        <a href="/contact" className="nav-link transition-colors duration-300">Contact Us</a>
+      <div className="ml-80 flex space-x-9 text-sm tracking-tight">
+        <button className="nav-link transition-colors uppercase duration-300">About us</button>
+        <button className="nav-link transition-colors uppercase duration-300">Business</button>
+        <button className="nav-link transition-colors uppercase duration-300">people</button>
+        <button className="nav-link transition-colors uppercase duration-300">sustainability</button>
+        <button className="nav-link transition-colors uppercase duration-300">Media</button>
+        <button className="nav-link transition-colors uppercase duration-300">Contact Us</button>
       </div>
     </nav>
   );

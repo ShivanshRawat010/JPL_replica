@@ -36,7 +36,6 @@ const Test = () => {
   const swiperContainerRef = useRef(null);
 
   useEffect(() => {
-    // Import Swiper modules
     Swiper.use([Navigation, Pagination]);
     
     if (!swiperContainerRef.current) return;
@@ -56,7 +55,6 @@ const Test = () => {
       speed: 2000,
     });
     
-    // Cleanup on unmount
     return () => {
       if (swiper && !swiper.destroyed) {
         swiper.destroy();
@@ -82,11 +80,9 @@ const Test = () => {
           ))}
         </div>
         
-        {/* Add pagination dots */}
         <div className="swiper-pagination"></div>
       </div>
       
-      {/* Custom navigation buttons */}
       <div className="absolute w-[14vw] flex items-center gap-x-[2px] justify-center h-[10vh] left-[50%] bottom-0 -translate-x-1/2 z-10">
         <div className="custom-swiper-button-prev w-[40%] h-full bg-white flex items-center justify-center cursor-pointer">
           <img className="w-[80%]" src="https://cdn-icons-png.flaticon.com/128/5111/5111424.png" alt="Previous" />
@@ -96,7 +92,6 @@ const Test = () => {
         </div>
       </div>
       
-      {/* Hide default Swiper arrows with CSS */}
       <style>
         {`
           .swiper-button-next, .swiper-button-prev {
