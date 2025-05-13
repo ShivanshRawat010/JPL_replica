@@ -6,6 +6,9 @@ const India_operation = () => {
   return (
     <>
       <Navbar />
+
+
+      
       <div className='relative font-roboto'>
         <div className='w-full'>
           <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1708173704Business-India-Operation.jpg" className='w-[100%]' alt="" />

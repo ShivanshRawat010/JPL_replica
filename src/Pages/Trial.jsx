@@ -1,62 +1,24 @@
-import { useEffect } from 'react';
+import React from 'react'
+import { FaArrowRightLong } from "react-icons/fa6";
 
-export default function Trial() {
-  // Your background images
-  const backgrounds = [
-    'https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984067Tamnar-BG.jpg',
-    'https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984066Shirpur-BG.jpg',
-    'https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707984066Simhapuri-BG.jpg'
-  ];
+const Trial = () => {
 
   return (
-    <div>
-      {/* First Section */}
-      <div 
-        className="h-screen w-full relative" 
-        style={{
-          backgroundImage: `url(${backgrounds[0]})`,
-          backgroundAttachment: 'fixed',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="absolute bottom-16 left-16 text-white">
-          <div className="text-orange-500 text-4xl font-bold mb-2">03</div>
-          <h2 className="text-5xl font-bold">Respect for<br />People</h2>
-        </div>
+    <div className='h-[30vw] w-[22vw]'>
+      <div className={`w-full h-[90%] bg-cover bg-center`} style={{ backgroundImage: `url(${props.image})` }}>
+        
       </div>
-
-      {/* Second Section */}
-      <div 
-        className="h-screen w-full relative" 
-        style={{
-          backgroundImage: `url(${backgrounds[1]})`,
-          backgroundAttachment: 'fixed',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="absolute bottom-16 left-16 text-white">
-          <div className="text-orange-500 text-4xl font-bold mb-2">04</div>
-          <h2 className="text-5xl font-bold">Sustainability</h2>
+      <a href={props.link} className=' bottom-0 bg-[#1A1A1A] font-roboto left-0 w-full inline-block pl-10 py-8'>
+        <div className='w-full bg-[#1A1A1A] text-[1.3vw] capitalize text-white font-[900] flex items-center'>
+          Mr. Naveen Jindal <span className='ml-4'><FaArrowRightLong/></span>
         </div>
-      </div>
-
-      {/* Third Section */}
-      <div 
-        className="h-screen w-full relative" 
-        style={{
-          backgroundImage: `url(${backgrounds[2]})`,
-          backgroundAttachment: 'fixed',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="absolute bottom-16 left-16 text-white">
-          <div className="text-orange-500 text-4xl font-bold mb-2">05</div>
-          <h2 className="text-5xl font-bold">Innovation</h2>
-        </div>
-      </div>
+        <h3 className='text-white text-[10px] tracking-widest font-semibold'>
+          {props.role}
+        </h3>
+        
+      </a>
     </div>
-  );
+  )
 }
+
+export default Trial

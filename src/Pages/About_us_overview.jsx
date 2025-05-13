@@ -71,7 +71,7 @@ const About_us_overview = () => {
 
 
 
-        <div className='w-[80%] pt-16 pb-16'>
+        <div className='w-[80%] pt-20 pb-16'>
           <h3 className='font-roboto text-[1.7vw] font-[300]'>At Jindal Power Limited, we are at the forefront of the energy revolution, delivering cutting-edge power solutions to meet the dynamic needs of a rapidly evolving world. Our state-of-the-art power plants strategically located across India are a testament to our commitment to innovation, sustainability, and excellence.</h3>
         </div>
 
@@ -180,7 +180,7 @@ const About_us_overview = () => {
       <Footer />
 
 
-      
+
     </div>
   )
 }
