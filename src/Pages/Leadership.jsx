@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from '../Components/Navbar'
 import Member_card from '../Components/Member_card'
 import Footer from '../Components/Footer'
-import { link } from 'framer-motion/client'
 
 const Leadership = () => {
 
@@ -11,19 +10,19 @@ const Leadership = () => {
       name: "Mr. Anil Kumar Pandey", 
       role: "Managing Director",
       image: "https://d2lptvt2jijg6f.cloudfront.net/jpl/post/1708501006ak-pandey.jpg",
-      link: "/"
+      link: "/board-anil-pandey"
     },
     {
       name: "Mr. Om Prakash",
       role: "Whole-Time Director",
       image: "https://ppel.s3.ap-south-1.amazonaws.com/jpl/post/1743492428MrOmPrakash.jpg",
-      link: "/"
+      link: "/board-om-prakash"
     },
     {
       name: "Mrs. Shilpa Jha",
       role: "Non-executive Director",
       image: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707982644ShipraJha.jpg",
-      link: "/"
+      link: "/board-shilpa-jha"
     }
   ]
 
