@@ -16,14 +16,11 @@ const Navbar = () => {
     "ABOUT US": [
       { name: "OVERVIEW", href: "/about-us-overview" },
       { name: "LEADERSHIP", href: "about-us-leadership" },
-      { name: "AWARDS", href: "/about/awards" },
-      { name: "STATUTORY INFORMATION", href: "/about/statutory-information" }
+      { name: "AWARDS", href: "/awards" }
     ],
     "BUSINESS": [
-      { name: "POWER", href: "/business/power" },
-      { name: "CEMENT", href: "/business/cement" },
-      { name: "ALUMINUM", href: "/business/aluminum" },
-      { name: "REAL ESTATE", href: "/business/real-estate" }
+      { name: "INDIA OPERATIONS", href: "/india-operations" },
+      { name: "OVERSEAS OPERATION", href: "/overseas-operations" },
     ],
     "PEOPLE": [
       { name: "CAREERS", href: "/people/careers" },
@@ -185,7 +182,7 @@ const Navbar = () => {
                       key={subItem.name}
                       href={subItem.href}
                       className={`block w-full text-left px-6 py-4 text-sm transition-colors
-                        ${index === 0 ? 'text-white font-bold' : 'text-gray-400 font-normal'}
+                        'text-gray-400 font-normal'
                         hover:bg-gray-800 hover:text-white border-b border-gray-800 last:border-b-0`}
                     >
                       {subItem.name}
