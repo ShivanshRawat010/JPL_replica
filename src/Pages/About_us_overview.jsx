@@ -148,7 +148,7 @@ const About_us_overview = () => {
               <h3 className='text-[1.8vw] text-white font-[300] pt-4 mb-8'>
                 A well-known Indian industrialist and philanthropist, Mr. Naveen Jindal is the Chairman of Jindal Group, one of India’s leading industrial conglomerates in the steel, mining and infrastructure sectors. He has led the company with visionary leadership and a strong focus on innovation and sustainability.
               </h3>
-              <Button_slider text="OUR LEADERSHIP" link=""/>
+              <Button_slider text="OUR LEADERSHIP" link="/about-us-leadership"/>
             </div>
         </div>
 

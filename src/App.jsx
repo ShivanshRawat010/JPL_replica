@@ -8,6 +8,7 @@ import India_operation from './Pages/India_operation';
 import About_us_overview from './Pages/About_us_overview';
 import Leadership from './Pages/Leadership';
 import Board_member from './Pages/Board_member';
+import Awards from './Pages/Awards';
 
 
 
@@ -37,6 +38,7 @@ const App = () => {
       <Route path="/board-anil-pandey" element={<Board_member id="ap"/>}/>
       <Route path="/board-om-prakash" element={<Board_member id="op"/>}/>
       <Route path="/board-shilpa-jha" element={<Board_member id="sj"/>}/>
+      <Route path="/awards" element={<Awards />} />
     </Routes>
   )
 }
