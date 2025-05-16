@@ -10,6 +10,9 @@ import Leadership from './Pages/Leadership';
 import Board_member from './Pages/Board_member';
 import Awards from './Pages/Awards';
 import Overseas_operation from './Pages/Overseas_operation';
+import People_overview from './Pages/People_overview';
+import JIPT from './Pages/JIPT';
+import Jobs from './Pages/Jobs';
 
 
 
@@ -32,8 +35,9 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      {/* <Route path="/trial" element={<Trial />} /> */}
+      <Route path="/trial" element={<Trial />} />
       <Route path="/about-us-overview" element={<About_us_overview />} />
+      <Route path="/people-overview" element={<People_overview />} />
       <Route path="/india-operations" element={<India_operation />} />
       <Route path="/overseas-operations" element={<Overseas_operation />} />
       <Route path="/about-us-leadership" element={<Leadership />} />
@@ -41,6 +45,8 @@ const App = () => {
       <Route path="/board-om-prakash" element={<Board_member id="op"/>}/>
       <Route path="/board-shilpa-jha" element={<Board_member id="sj"/>}/>
       <Route path="/awards" element={<Awards />} />
+      <Route path="/jipt" element={<JIPT />} />
+      <Route path="/job-openings" element={<Jobs />} />
     </Routes>
   )
 }

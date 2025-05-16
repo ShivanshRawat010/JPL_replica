@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         gotham: ['Gotham', 'sans-serif'],
+        segoe: ['Segoe UI', 'sans-serif'],
       },
     },
   },

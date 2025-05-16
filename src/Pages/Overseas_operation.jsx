@@ -7,6 +7,8 @@ const Overseas_operation = () => {
     <>
       <Navbar/>
 
+
+
       <div className='relative font-roboto'>
         <div className='w-full'>
           <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1708420611overseas-banner.jpg" className='w-[100%]' alt="" />
@@ -19,6 +21,8 @@ const Overseas_operation = () => {
         </div>
       </div>
 
+
+
       <div className='w-full flex flex-col items-center justify-center gap-10 py-20 px-[10vw] font-roboto text-[1.7vw] font-[300]'>
         <p>
           Jindal Energy, a dynamic subsidiary of Jindal Power Limited (JPL), is leading a transformative initiative in Botswana, driven by an ambitious vision to establish a robust Base Load Thermal Power Plant. This project will introduce an initial 300 MW capacity, followed by an additional 300 MW in the second phase. Designed to ensure an unwavering supply of electricity, this venture aims to meet Botswana's growing energy demands and serve as a power beacon for neighboring African nations. This groundbreaking project is set to reshape the regional energy landscape, playing a pivotal role in transforming countless lives.
@@ -27,6 +31,8 @@ const Overseas_operation = () => {
           With Jindal Energy at the helm, this endeavor is not just about generating power—it's about fueling progress and prosperity across borders.
         </p>
       </div>
+
+
 
       <div className='w-full h-[78vh] bg-[url("https://ppel.s3.ap-south-1.amazonaws.com/jpl/custom/17307083071707823718PioneeringInnovation.jpg")] bg-cover bg-center bg-fixed flex items-center justify-center'>
         <div className='w-[35%]'>
@@ -41,6 +47,8 @@ const Overseas_operation = () => {
           </h3>
         </div>
       </div>
+      
+
 
       <div className='w-full py-20'>
         <div className='w-[80%] mx-auto flex items-stretch justify-between gap-8'>
@@ -80,6 +88,7 @@ const Overseas_operation = () => {
           </div>
         </div>
       </div>
+
 
       
       <Footer/>

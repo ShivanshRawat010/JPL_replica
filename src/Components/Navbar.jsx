@@ -23,14 +23,13 @@ const Navbar = () => {
       { name: "OVERSEAS OPERATION", href: "/overseas-operations" },
     ],
     "PEOPLE": [
-      { name: "CAREERS", href: "/people/careers" },
-      { name: "CULTURE", href: "/people/culture" },
-      { name: "DIVERSITY", href: "/people/diversity" }
+      { name: "OVERVIEW", href: "/people-overview" },
+      { name: "JIPT", href: "/jipt" },
+      { name: "JOB OPENINGS", href: "/job-openings" }
     ],
     "SUSTAINABILITY": [
-      { name: "INITIATIVES", href: "/sustainability/initiatives" },
-      { name: "REPORTS", href: "/sustainability/reports" },
-      { name: "GOALS", href: "/sustainability/goals" }
+      { name: "CSR INITIATIVES", href: "/csr-initiatives" },
+      { name: "ENVIRONMENT", href: "/environment" }
     ],
     "MEDIA": [
       { name: "NEWS", href: "/media/news" },
