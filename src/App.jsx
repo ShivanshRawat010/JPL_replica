@@ -13,6 +13,7 @@ import Overseas_operation from './Pages/Overseas_operation';
 import People_overview from './Pages/People_overview';
 import JIPT from './Pages/JIPT';
 import Jobs from './Pages/Jobs';
+import Sustainability from './Pages/Sustainability';
 
 
 
@@ -47,6 +48,7 @@ const App = () => {
       <Route path="/awards" element={<Awards />} />
       <Route path="/jipt" element={<JIPT />} />
       <Route path="/job-openings" element={<Jobs />} />
+      <Route path="/csr-initiatives" element={<Sustainability />} />
     </Routes>
   )
 }
