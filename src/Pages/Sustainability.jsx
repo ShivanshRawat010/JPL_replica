@@ -11,7 +11,7 @@ const Sustainability = () => {
 
       <div className='relative font-roboto'>
         <div className='w-full'>
-          <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1708602907people-banner-new.jpg" className='w-[100%]' alt="" />
+          <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1708609464sustainability-banner.jpg" className='w-[100%]' alt="" />
         </div>
         <div className='absolute bottom-10 left-40'>
           <h1 className='text-white font-bold text-[4vw] mb-4'>Sustainability</h1>

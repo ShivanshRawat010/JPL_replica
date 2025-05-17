@@ -31,16 +31,8 @@ const Navbar = () => {
       { name: "CSR INITIATIVES", href: "/csr-initiatives" },
       { name: "ENVIRONMENT", href: "/environment" }
     ],
-    "MEDIA": [
-      { name: "NEWS", href: "/media/news" },
-      { name: "PRESS RELEASES", href: "/media/press-releases" },
-      { name: "GALLERY", href: "/media/gallery" }
-    ],
-    "CONTACT US": [
-      { name: "LOCATIONS", href: "/contact/locations" },
-      { name: "SUPPORT", href: "/contact/support" },
-      { name: "FEEDBACK", href: "/contact/feedback" }
-    ]
+    "MEDIA": [],
+    "CONTACT US": []
   };
 
   useEffect(() => {
@@ -112,9 +104,17 @@ const Navbar = () => {
   };
 
   const handleMenuClick = (menuName, e) => {
+    if (menuName === "CONTACT US") return; // allow direct navigation
+    if (menuName === "MEDIA") {
+      e.preventDefault(); // prevent navigation
+      return;
+    }
+    if (menuItems[menuName].length === 0) return;
+  
     e.preventDefault();
     setActiveDropdown(activeDropdown === menuName ? null : menuName);
   };
+  
 
   const dropdownVariants = {
     hidden: { opacity: 0, y: -20, scaleY: 0 },
@@ -158,7 +158,9 @@ const Navbar = () => {
         {Object.keys(menuItems).map((item) => (
           <div key={item} className="dropdown-container relative">
             <a
-              href={`/${item.toLowerCase().replace(/\s+/g, '-')}`}
+              href={item === "CONTACT US"
+                ? "/contact"
+                : `/${item.toLowerCase().replace(/\s+/g, '-')}`}
               className="nav-link transition-colors uppercase duration-300"
               onClick={(e) => handleMenuClick(item, e)}
             >

@@ -14,6 +14,8 @@ import People_overview from './Pages/People_overview';
 import JIPT from './Pages/JIPT';
 import Jobs from './Pages/Jobs';
 import Sustainability from './Pages/Sustainability';
+import Environment from './Pages/Environment';
+import Contact from './Pages/Contact';
 
 
 
@@ -36,7 +38,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/trial" element={<Trial />} />
+      {/* <Route path="/trial" element={<Trial />} /> */}
       <Route path="/about-us-overview" element={<About_us_overview />} />
       <Route path="/people-overview" element={<People_overview />} />
       <Route path="/india-operations" element={<India_operation />} />
@@ -49,6 +51,8 @@ const App = () => {
       <Route path="/jipt" element={<JIPT />} />
       <Route path="/job-openings" element={<Jobs />} />
       <Route path="/csr-initiatives" element={<Sustainability />} />
+      <Route path="/environment" element={<Environment />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   )
 }
