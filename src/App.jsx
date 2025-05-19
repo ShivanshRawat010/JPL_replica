@@ -53,7 +53,7 @@ const App = () => {
       <Route path="/job-openings" element={<Jobs />} />
       <Route path="/csr-initiatives" element={<Sustainability />} />
       <Route path="/environment" element={<Environment />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="https://jpl-replica.onrender.com/contact" element={<Contact />} />
       <Route path="/disclaimer" element={<Disclaimer />} />
     </Routes>
   )
