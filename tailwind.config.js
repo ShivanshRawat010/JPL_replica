@@ -10,6 +10,7 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
         gotham: ['Gotham', 'sans-serif'],
         segoe: ['Segoe UI', 'sans-serif'],
+        'gotham-light': ['Gotham Light', 'sans-serif'],
       },
     },
   },

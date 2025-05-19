@@ -16,6 +16,7 @@ import Jobs from './Pages/Jobs';
 import Sustainability from './Pages/Sustainability';
 import Environment from './Pages/Environment';
 import Contact from './Pages/Contact';
+import Disclaimer from './Pages/Disclaimer';
 
 
 
@@ -53,6 +54,7 @@ const App = () => {
       <Route path="/csr-initiatives" element={<Sustainability />} />
       <Route path="/environment" element={<Environment />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/disclaimer" element={<Disclaimer />} />
     </Routes>
   )
 }

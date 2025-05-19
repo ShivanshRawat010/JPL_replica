@@ -79,15 +79,15 @@ const Footer = () => {
         </div>
 
         <div className="trans-text opacity-0 translate-y-[100px] space-y-6">
-          <p>About Us</p>
-          <p>Our Businesses</p>
-          <p>People</p>
+          <a className="block" href="/about-us-overview">About Us</a>
+          <a className="block" href="/india-operations">Our Businesses</a>
+          <a className="block" href="/people-overview">People</a>
         </div>
 
         <div className="trans-text opacity-0 translate-y-[100px] space-y-6">
           <p>Media</p>
-          <p>Sustainability</p>
-          <p>Contact Us</p>
+          <a className="block" href="csr-initiatives">Sustainability</a>
+          <a className="block" href="contact">Contact Us</a>
         </div>
 
         <div className="trans-text opacity-0 translate-y-[100px] space-y-2">
@@ -102,7 +102,7 @@ const Footer = () => {
 
       <div className="mt-6 flex flex-col md:flex-row justify-between items-center text-gray-400">
         <p>© Jindal power All Rights Reserved 2024</p>
-        <p>Disclaimer</p>
+        <a className="block" href="/disclaimer">Disclaimer</a>
       </div>
     </footer>
   );
