@@ -19,7 +19,7 @@ const Leadership = () => {
       link: "/board-om-prakash"
     },
     {
-      name: "Mrs. Shilpa Jha",
+      name: "Mrs. Shipra Jha",
       role: "Non-executive Director",
       image: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707982644ShipraJha.jpg",
       link: "/board-shilpa-jha"
