@@ -40,7 +40,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       {/* <Route path="/trial" element={<Trial />} /> */}
-      <Route path="/about-us-overview" element={<About_us_overview />} />
+      <Route path="https://jpl-replica.onrender.com/about-us-overview" element={<About_us_overview />} />
       <Route path="/people-overview" element={<People_overview />} />
       <Route path="/india-operations" element={<India_operation />} />
       <Route path="/overseas-operations" element={<Overseas_operation />} />
