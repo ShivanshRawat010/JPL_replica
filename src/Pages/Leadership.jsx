@@ -22,7 +22,7 @@ const Leadership = () => {
       name: "Mrs. Shipra Jha",
       role: "Non-executive Director",
       image: "https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707982644ShipraJha.jpg",
-      link: "/board-shilpa-jha"
+      link: "/board-shipra-jha"
     }
   ]
 
