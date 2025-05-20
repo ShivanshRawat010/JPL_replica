@@ -47,7 +47,7 @@ const App = () => {
       <Route path="/about-us-leadership" element={<Leadership />} />
       <Route path="/board-anil-pandey" element={<Board_member id="ap"/>}/>
       <Route path="/board-om-prakash" element={<Board_member id="op"/>}/>
-      <Route path="/board-shilpa-jha" element={<Board_member id="sj"/>}/>
+      <Route path="/board-shipra-jha" element={<Board_member id="sj"/>}/>
       <Route path="/awards" element={<Awards />} />
       <Route path="/jipt" element={<JIPT />} />
       <Route path="/job-openings" element={<Jobs />} />
@@ -55,7 +55,6 @@ const App = () => {
       <Route path="/environment" element={<Environment />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/disclaimer" element={<Disclaimer />} />
-      <Route path="*" element={<LandingPage />} />
     </Routes>
   )
 }
