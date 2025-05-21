@@ -1,13 +1,25 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import { gsap } from 'gsap'
 
 const Contact = () => {
 
-  gsap.to('.inquiry', {
-    
-  })
+  useEffect(() => {
+    gsap.fromTo('.inquiry', {
+      y: -60,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: 1.3,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.parent',
+        start: 'top 80%',
+      }
+    })
+  });
 
   return (
     <>
@@ -89,9 +101,9 @@ const Contact = () => {
       </div>
 
 
-      <div className='w-full bg-[#2E2935] flex px-[10vw] py-20'>
-        <div className='w-[50%] h-full flex justify-start inquiry'>
-          <h1 className='text-[2.7vw] text-white font-semibold font-gotham'>Inquiry Form</h1>
+      <div className='w-full bg-[#2E2935] flex px-[10vw] py-20 parent'>
+        <div className='w-[50%] h-full flex justify-start '>
+          <h1 className='text-[2.7vw] text-white font-semibold font-gotham inquiry'>Inquiry Form</h1>
         </div>
 
         <div className='w-[50%] h-full holder'>
