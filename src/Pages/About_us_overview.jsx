@@ -60,7 +60,7 @@ const About_us_overview = () => {
         </div>
         <div className='absolute bottom-10 left-40'>
           <h1 className='text-white font-bold text-[4vw] mb-4'>About Us</h1>
-          <div className='text-white font-[500] w-[430px] py-2 flex items-center justify-center whitespace-nowrap bg-orange-500 text-[1.5vw]'>
+          <div className='text-white font-[500] px-2 py-2 flex items-center justify-center whitespace-nowrap bg-orange-500 text-[1.5vw]'>
             Energising Progress, Empowering Futures
           </div>
         </div>

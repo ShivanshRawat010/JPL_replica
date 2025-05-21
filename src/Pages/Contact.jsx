@@ -1,7 +1,14 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
+import { gsap } from 'gsap'
 
 const Contact = () => {
+
+  gsap.to('.inquiry', {
+    
+  })
+
   return (
     <>
       <Navbar />
@@ -83,20 +90,23 @@ const Contact = () => {
 
 
       <div className='w-full bg-[#2E2935] flex px-[10vw] py-20'>
-        <div className='w-[50%] h-full flex justify-start'>
+        <div className='w-[50%] h-full flex justify-start inquiry'>
           <h1 className='text-[2.7vw] text-white font-semibold font-gotham'>Inquiry Form</h1>
         </div>
 
-        <div className='w-[50%] h-full'>
-          <form action="" className='flex flex-col gap-6 font-segoe font-[300] text-white'>
-            <input type="text" placeholder='Name' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1'/>
-            <input type="text" placeholder='Company' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1'/>
-            <input type="text" placeholder='Email Id' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1'/>
-            <input type="text" placeholder='Ph. No.' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1'/>
-            <input type="text" placeholder='Message' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1'/>
+        <div className='w-[50%] h-full holder'>
+          <form action="" className='flex flex-col gap-6 font-segoe font-[300] text-white w-full items-start'>
+            <input type="text" placeholder='Name' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1 w-full'/>
+            <input type="text" placeholder='Company' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1 w-full'/>
+            <input type="text" placeholder='Email Id' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1 w-full'/>
+            <input type="text" placeholder='Ph. No.' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1 w-full'/>
+            <input type="text" placeholder='Message' className=' outline-none bg-transparent border-b-[1px] text-[1.3vw] pb-1 w-full'/>
+            <input type="submit" value="Submit" className='w-[250px] h-[60px] mt-8 bg-white text-black uppercase text-[15px] font-semibold tracking-[8px]' />
           </form>
         </div>
       </div>
+
+      <Footer/>
 
     </>
   )
