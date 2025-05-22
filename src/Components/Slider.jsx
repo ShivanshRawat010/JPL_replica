@@ -63,7 +63,7 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className="bg-white h-screen w-full pt-48 relative overflow-hidden">
+    <div className="bg-white w-full pt-48 relative overflow-hidden">
       <div className="swiper-container" ref={swiperContainerRef}>
         <div className="swiper-wrapper">
           {plantData.map((plant, index) => (

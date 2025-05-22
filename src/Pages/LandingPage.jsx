@@ -160,7 +160,7 @@ const LandingPage = () => {
             Energy Footprint
           </h1>
         </div>
-        <div className='w-[80%] flex bg-white h-[60vh] shadow-[-5px_-5px_10px_3px_rgba(0,0,0,0.2)]'>
+        <div className='w-[80%] flex justify-between pr-20 bg-white h-[60vh] shadow-[-5px_-5px_10px_3px_rgba(0,0,0,0.2)]'>
           <div className='h-full flex items-center justify-center py-8'>
             <video className='w-[80%] h-full object-contain'
               autoPlay
@@ -168,7 +168,7 @@ const LandingPage = () => {
               muted
               playsInline src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1708594444JPLMap1.mp4"></video>
           </div>
-          <div className='w-[50%] h-full pl-20 pt-12 font-roboto font-light text-[1.38rem] tracking-wide leading-9'>
+          <div className='w-[50%] h-full pt-12 font-roboto font-light text-[2.8vh] tracking-wide leading-9'>
             <h3>
               <span className='font-[360]'>Jindal Power Limited</span>, a powerhouse across India with thermal power stations in Tamnar, Chhattisgarh; Shirpur, Maharashtra; and Simhapuri, Andhra Pradesh, is setting its sights beyond borders. The company is poised to electrify Botswana with a soon-to-be-built, 600 MW base-load thermal power station. Having secured the coveted position as the preferred bidder for a 300 MW power plant, Jindal Power is ready to fuel Botswana's growth and illuminate its future.
             </h3>
@@ -227,7 +227,7 @@ const LandingPage = () => {
 
 
 
-      <div className='bg-white h-screen w-full relative overflow-hidden'>
+      <div className='bg-white min-h-screen w-full relative overflow-hidden'>
         <div className='text-div-2 absolute left-[10vw] top-[6vw] font-roboto z-[20]'>
           <h1 className='text-[4.3vw] font-bold'>Diverse Portfolio</h1>
           <div className='flex items-center justify-start gap-x-4 pt-2'>
@@ -251,7 +251,7 @@ const LandingPage = () => {
         </div>
         <div className='w-[80%] h-[60vh] flex justify-between items-center gap-x-6'>
 
-          <div className='bg-[#343541] h-[75%] uppercase font-roboto flex flex-col items-center justify-center gap-y-4 py-4 w-[45%] px-4'>
+          <div className='bg-[#343541] h-[80%] uppercase font-roboto flex flex-col items-center justify-center gap-y-2 w-[45%] px-4'>
             <div className='flex flex-col justify-center items-center text-[1.7vw] text-white'>
               <h3 className='font-[300]'>
                 Commited to
@@ -261,31 +261,31 @@ const LandingPage = () => {
               </h3>
             </div>
             <div className='w-full flex items-center justify-center'>
-              <div className=' bg-white flex items-center justify-center py-2 w-24 h-16'>
-                <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707905654solar-icon.png" className='object-cover w-[80%]' alt="" />
+              <div className=' bg-white flex items-center justify-center py-2 px-2 w-[20%] h-[85%]'>
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707905654solar-icon.png" className='object-cover' alt="" />
               </div>
-              <div className='w-full h-16 bg-orange-500 flex items-center justify-center font-[300] capitalize text-white text-[1.7vw]'>
+              <div className='w-full h-[85%] bg-orange-500 flex items-center justify-center font-[300] capitalize text-white text-[1.7vw]'>
                 <h3>Renewable Energy Usage</h3>
               </div>
             </div>
             <div className='w-full flex items-center justify-center'>
-              <div className='bg-white flex items-center justify-center py-2 w-24 h-16'>
-                <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707905653co2-reduction-icon.png" className='object-cover w-[60%]' alt="" />
+              <div className='bg-white flex items-center justify-center py-2 px-2 w-[20%] h-[85%]'>
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707905653co2-reduction-icon.png" className='object-cover' alt="" />
               </div>
-              <div className='w-full h-16 bg-orange-500 flex items-center justify-center font-[300] capitalize text-white text-[1.7vw]'>
+              <div className='w-full h-[85%] bg-orange-500 flex items-center justify-center font-[300] capitalize text-white text-[1.7vw]'>
                 <h3>Carbon Emissions Reduction</h3>
               </div>
             </div>
             <div className='w-full flex items-center justify-center'>
-              <div className='bg-white flex items-center justify-center py-2 w-24 h-16'>
-                <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707905654enviornment-protection-icon.png" className='object-cover w-[70%]' alt="" />
+              <div className='bg-white flex items-center justify-center py-2 px-2 w-[20%] h-[85%]'>
+                <img src="https://d2lptvt2jijg6f.cloudfront.net/jpl/custom/1707905654enviornment-protection-icon.png" className='object-cover ' alt="" />
               </div>
-              <div className='w-full h-16 bg-orange-500 flex items-center justify-center font-[300] capitalize text-white text-[1.7vw]'>
+              <div className='w-full h-[85%] bg-orange-500 flex items-center justify-center font-[300] capitalize text-white text-[1.7vw]'>
                 <h3>Environmental Protection</h3>
               </div>
             </div>
           </div>
-          <div className='w-[55%] h-[75%] bg-[#F1F1F1] font-roboto font-[250] text-[1.7vw] p-8'>
+          <div className='w-[55%] h-[80%] bg-[#F1F1F1] font-roboto font-[250] text-[1.7vw] p-8'>
             <h3>
               Committed to increasing the share of power generated through renewable sources. As the 5th largest integrated power producer, we aim to set benchmarks in renewable energy, carbon emissions, and environmental protection.
             </h3>
