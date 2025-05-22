@@ -32,7 +32,7 @@ const plantData = [
   }
 ];
 
-const Test = () => {
+const Slider = () => {
   const swiperContainerRef = useRef(null);
 
   useEffect(() => {
@@ -104,4 +104,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Slider;
